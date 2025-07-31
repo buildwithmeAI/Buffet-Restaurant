@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Food - Global Flavors Buffet</title>
+    <meta name="description" content="Explore our gallery of signature dishes, chef's specials, and event catering images at Global Flavors Buffet.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-red-600">Global Flavors</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-red-600 font-medium">Home</a>
+                <a href="services.html" class="hover:text-red-600 font-medium">Services</a>
+                <a href="portfolio.html" class="text-red-600 hover:text-red-800 font-medium">Our Food</a>
+                <a href="about.html" class="hover:text-red-600 font-medium">About Us</a>
+                <a href="contact.html" class="hover:text-red-600 font-medium">Contact</a>
+                <a href="book.html" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">Book a Table</a>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="outline-none mobile-menu-button">
+                    <svg class="w-6 h-6 text-red-600" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="hidden mobile-menu md:hidden">
+            <ul class="px-6 py-4 bg-white shadow-md">
+                <li><a href="index.html" class="block hover:text-red-600 py-2 font-medium">Home</a></li>
+                <li><a href="services.html" class="block hover:text-red-600 py-2 font-medium">Services</a></li>
+                <li><a href="portfolio.html" class="block text-red-600 py-2 font-medium">Our Food</a></li>
+                <li><a href="about.html" class="block hover:text-red-600 py-2 font-medium">About Us</a></li>
+                <li><a href="contact.html" class="block hover:text-red-600 py-2 font-medium">Contact</a></li>
+                <li class="mt-2"><a href="book.html" class="block bg-red-600 text-white px-4 py-2 rounded-lg text-center hover:bg-red-700 transition duration-300">Book a Table</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-8 md:pt-32 md:pb-12 bg-gradient-to-r from-yellow-50 to-red-50">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="text-red-600">Food Gallery</span></h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Feast your eyes on our culinary masterpieces. Each dish is crafted with passion, using the freshest ingredients to bring you the best flavors from across the globe.</p>
+        </div>
+    </section>
+
+    <!-- Food Categories Navigation -->
+    <section class="py-8 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center space-x-2 space-y-2 md:space-y-0">
+                <button class="category-btn active bg-red-600 text-white px-4 py-2 rounded-full font-medium hover:bg-red-700 transition duration-300" data-category="all">All Dishes</button>
+                <button class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-gray-300 transition duration-300" data-category="vegetarian">Vegetarian</button>
+                <button class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-gray-300 transition duration-300" data-category="non-vegetarian">Non-Vegetarian</button>
+                <button class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-gray-300 transition duration-300" data-category="desserts">Desserts</button>
+                <button class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-gray-300 transition duration-300" data-category="specials">Chef's Specials</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Gallery -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery">
+                <!-- Vegetarian Dishes -->
+                <!-- Dish 1 -->
+                <div class="food-item vegetarian bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" alt="Fresh Vegetable Salad" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Fresh Vegetable Salad</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">A refreshing mix of seasonal vegetables with our house dressing.</p>
+                    </div>
+                </div>
+                <!-- Dish 2 -->
+                <div class="food-item vegetarian bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Vegetable Biryani" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Vegetable Biryani</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Aromatic basmati rice cooked with fresh vegetables and a blend of traditional Indian spices.</p>
+                    </div>
+                </div>
+                <!-- Dish 3 -->
+                <div class="food-item vegetarian specials bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Paneer Butter Masala" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Paneer Butter Masala</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Cottage cheese cubes in a rich, creamy tomato sauce with aromatic spices.</p>
+                    </div>
+                </div>
+                <!-- Dish 4 -->
+                <div class="food-item vegetarian bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Pasta Primavera" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Pasta Primavera</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Al dente pasta tossed with seasonal vegetables in a light, creamy sauce with a hint of garlic.</p>
+                    </div>
+                </div>
+                <!-- Dish 5 -->
+                <div class="food-item vegetarian bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80" alt="Mediterranean Falafel" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Mediterranean Falafel</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Crispy chickpea patties served with tahini sauce and fresh vegetables.</p>
+                    </div>
+                </div>
+
+                <!-- Non-Vegetarian Dishes -->
+                <!-- Dish 6 -->
+                <div class="food-item non-vegetarian specials bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1188&q=80" alt="Butter Chicken" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Butter Chicken</h3>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Tender chicken pieces in a rich, creamy tomato sauce with a blend of aromatic spices.</p>
+                    </div>
+                </div>
+                <!-- Dish 7 -->
+                <div class="food-item non-vegetarian bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Grilled Salmon" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Grilled Salmon</h3>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Fresh salmon fillet grilled to perfection, served with a lemon butter sauce.</p>
+                    </div>
+                </div>
+                <!-- Dish 8 -->
+                <div class="food-item non-vegetarian bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Lamb Rogan Josh" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Lamb Rogan Josh</h3>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Tender lamb pieces slow-cooked in a rich, aromatic curry with Kashmiri spices.</p>
+                    </div>
+                </div>
+                <!-- Dish 9 -->
+                <div class="food-item non-vegetarian bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80" alt="Teriyaki Chicken" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Teriyaki Chicken</h3>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Grilled chicken glazed with sweet and savory teriyaki sauce, served with steamed rice.</p>
+                    </div>
+                </div>
+                <!-- Dish 10 -->
+                <div class="food-item non-vegetarian specials bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="Garlic Prawns" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Garlic Prawns</h3>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Non-Vegetarian</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Succulent prawns sautéed with garlic, butter, and fresh herbs, served with crusty bread.</p>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <!-- Dish 11 -->
+                <div class="food-item desserts bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80" alt="Chocolate Fountain" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Chocolate Fountain</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Dessert</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Our famous chocolate fountain served with fresh fruits and various dipping options.</p>
+                    </div>
+                </div>
+                <!-- Dish 12 -->
+                <div class="food-item desserts specials bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" alt="Tiramisu" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Tiramisu</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Dessert</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+                    </div>
+                </div>
+                <!-- Dish 13 -->
+                <div class="food-item desserts bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80" alt="Assorted Pastries" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Assorted Pastries</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Dessert</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">A selection of freshly baked pastries including éclairs, fruit tarts, and cream puffs.</p>
+                    </div>
+                </div>
+                <!-- Dish 14 -->
+                <div class="food-item desserts bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1078&q=80" alt="Gulab Jamun" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Gulab Jamun</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Dessert</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Soft, spongy milk solids dumplings soaked in rose-flavored sugar syrup.</p>
+                    </div>
+                </div>
+                <!-- Dish 15 -->
+                <div class="food-item desserts bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" alt="Ice Cream Selection" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-lg">Ice Cream Selection</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Dessert</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">A variety of premium ice cream flavors with assorted toppings and sauces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef's Specials Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Chef's <span class="text-red-600">Specials</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our chef's special creations that showcase the finest ingredients and culinary expertise.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Special 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1188&q=80" alt="Signature Butter Chicken" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-red-700">Signature Butter Chicken</h3>
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Chef's Special</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Our signature butter chicken is prepared using a traditional recipe with a modern twist. Tender chicken pieces are marinated overnight, then cooked in a clay oven before being simmered in a rich, creamy tomato sauce with a blend of aromatic spices.</p>
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Chef Rajesh" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <p class="font-medium">Chef Rajesh Kumar</p>
+                                    <p class="text-sm text-gray-500">Head Chef</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Special 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Royal Paneer Masala" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-green-700">Royal Paneer Masala</h3>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Chef's Special</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Our royal paneer masala features house-made cottage cheese cubes in a luxurious gravy of cashews, tomatoes, and aromatic spices. The dish is finished with a touch of cream and fresh coriander for a truly royal experience.</p>
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Chef Priya" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <p class="font-medium">Chef Priya Sharma</p>
+                                    <p class="text-sm text-gray-500">Vegetarian Specialist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Special 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" alt="Artisanal Tiramisu" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-yellow-700">Artisanal Tiramisu</h3>
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Chef's Special</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Our artisanal tiramisu is a modern interpretation of the classic Italian dessert. Layers of coffee-soaked ladyfingers are alternated with a light, airy mascarpone cream, dusted with premium cocoa powder, and garnished with chocolate shavings.</p>
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Chef Marco" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <p class="font-medium">Chef Marco Rossi</p>
+                                    <p class="text-sm text-gray-500">Pastry Chef</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Special 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="Garlic Butter Prawns" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold text-red-700">Garlic Butter Prawns</h3>
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Chef's Special</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Our garlic butter prawns feature jumbo prawns sautéed in a rich garlic butter sauce with white wine and fresh herbs. Served with crusty bread to soak up the delicious sauce, this dish is a seafood lover's delight.</p>
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Chef Lisa" class="w-10 h-10 rounded-full mr-3">
+                                <div>
+                                    <p class="font-medium">Chef Lisa Chen</p>
+                                    <p class="text-sm text-gray-500">Seafood Specialist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section removed as per client request -->
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Experience Our Culinary Delights?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Book your table now and embark on a gastronomic journey like no other.</p>
+            <a href="book.html" class="inline-block bg-white text-red-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300 text-lg">Book a Table</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Global Flavors</h3>
+                    <p class="text-gray-400">Experience the best flavors from across the globe and India, made fresh with the finest ingredients.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition duration-300">Our Food</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="book.html" class="text-gray-400 hover:text-white transition duration-300">Book a Table</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>42 Food Street, Koramangala, Bangalore 560034</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span>(080) 4567-8901</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>info@globalflavors.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Opening Hours</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Monday - Friday: 11:00 AM - 10:00 PM</li>
+                        <li>Saturday - Sunday: 10:00 AM - 11:00 PM</li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Global Flavors Buffet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Category filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const foodItems = document.querySelectorAll('.food-item');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-red-600', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-800');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-red-600', 'text-white');
+                    this.classList.remove('bg-gray-200', 'text-gray-800');
+
+                    const category = this.getAttribute('data-category');
+
+                    // Show/hide food items based on category
+                    foodItems.forEach(item => {
+                        if (category === 'all' || item.classList.contains(category)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
